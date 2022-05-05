@@ -1,0 +1,14 @@
+python exp_batch_size_acc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\batch_size
+python exp_batch_size_inc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\batch_size
+
+python exp_cv_acc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\cv
+python exp_cv_inc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\cv
+
+python exp_dropout_acc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\drop_out
+python exp_dropout_inc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\drop_out
+
+python exp_lr_acc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\lr
+python exp_lr_inc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inclr
+
+python exp_nb_epochs_acc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\nb_epochs
+python exp_nb_epochs_inc.py --log_path D:\Users\wissam\Documents\These\these\papers_material\VLDB_submission\public_folder\experiments\logs\hyperparametrs_inc\nb_epochs
