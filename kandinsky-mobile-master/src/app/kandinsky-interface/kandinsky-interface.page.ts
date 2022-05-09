@@ -12,6 +12,7 @@ import * as d3 from 'd3';
 import { SpectrumRange, SpectrumInterval } from './spectrum-controls/spectrum-controls.component';
 import { HighlightOption } from '../highlight.pipe';
 import { ActivatedRoute } from '@angular/router';
+import { Sentiment } from '../sentiment.model';
 
 @Component({
   selector: 'ksky-kandinsky-interface',
@@ -68,6 +69,8 @@ export class KandinskyInterfacePage implements OnInit {
   commentRepliesContexts: CommentItemContext[];
   referenceCommentContext: CommentItemContext;
   similarCommentsContexts: CommentItemContext[];
+
+  sentiment: Sentiment;
 
   @ViewChild('timelineControls', { static: false })
   timelineControls: TimelineControlsComponent;
@@ -528,7 +531,8 @@ export class KandinskyInterfacePage implements OnInit {
             showScore: showSimilarityScore,
             score: similarityScore
           }
-        }
+        },
+        sentiment: ''
       }
     };
   }
@@ -634,6 +638,7 @@ type CommentItemContext = {
         showScore: boolean;
         score: number;
       }
-    }
+    },
+    sentiment: string,
   }
 }

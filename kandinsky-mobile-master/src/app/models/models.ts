@@ -57,5 +57,13 @@ export type SocialComment = Omit<RawSocialComment, 'comments'> & {
 };
 
 export enum SocialPlatform {
-  YOUTUBE = 'Youtube, LLC'
+  YOUTUBE = 'YouTube, LLC'
 };
+
+export type CommentSentiment = RawSocialComment & {
+  sentiment: {
+    vaderSentiment: number;
+    senticNetSentiment: number;
+    sentiwordnetSentiment: number;
+  }
+}

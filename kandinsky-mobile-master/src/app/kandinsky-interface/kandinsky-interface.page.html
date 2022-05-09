@@ -179,6 +179,7 @@
       <!-- yellow: {{context.display.highlightOptions[0].indices.join(' - ')}}
       blue: {{context.display.highlightOptions[1].indices.join(' - ')}} -->
       <p [innerHTML]="context.comment.content | highlight : context.display.highlightOptions | sanitizeHtml"></p>
+      <p [innerHTML]="context.comment.Sentiment"></p>
       <div class="d-flex justify-content-between">
         <div class="buttons-container">
           <ion-button size="small" fill="clear" color="medium">
