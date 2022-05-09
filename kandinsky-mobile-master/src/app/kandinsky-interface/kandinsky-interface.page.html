@@ -61,12 +61,12 @@
         </ion-card>
       </div>
       <div class="panel-container pl-4">
-        <button
-          class="btn btn-medium"
-          (click)="toggleSpectrum()">
-          <ion-icon
-            [color]="spectrum ? 'primary' : 'medium'"
-            name="podium">
+        <button class="btn btn-medium" (click)="toggleSpectrum()">
+          <ion-icon [color]="spectrum ? 'primary' : 'medium'" name="podium">
+          </ion-icon>
+        </button>
+        <button class="btn btn-medium" (click)="presentSentimentModal()">
+          <ion-icon [color]="spectrum ? 'primary' : 'medium'" name="happy">
           </ion-icon>
         </button>
       </div>
@@ -201,8 +201,8 @@
           </ion-button>
           <ion-button size="small" fill="clear" color="medium"
             *ngIf="context.analytics.similarity.showScore">
-            Similarity: {{ (context.analytics.similarity.score * 100) | number : '1.2-2' }}%
-          </ion-button>
+            Similarity: {{ (context.analytics.similarity.score * 100) }}%
+          </ion-button><!--| number : '1.2-2'-->
         </div>
       </div>
       <div class="reply-button-container">

@@ -4,6 +4,7 @@ import { SocialComment, SocialPlatform, SocialPost } from '../models/models';
 import { IonDatetime, ActionSheetController, ModalController, AlertController, IonSearchbar, LoadingController, NavController } from '@ionic/angular';
 import { TimelineControlsComponent } from './timeline-controls/timeline-controls.component';
 import { PostInformationModalComponent } from './post-information-modal/post-information-modal.component';
+import { SentimentModalComponent } from './sentiment-modal/sentiment-modal.component';
 import { KandinskyService, SearchResult, CommentGroupInterval } from '../services/kandinsky.service';
 import { ScaleLinear } from 'd3';
 import _ from 'lodash';
@@ -181,6 +182,17 @@ export class KandinskyInterfacePage implements OnInit {
   async presentPostInformationModal() {
     const modal = await this.modalController.create({
       component: PostInformationModalComponent,
+      componentProps: {
+        post: this.post
+      },
+      cssClass: 'auto-sized-modal'
+    });
+    await modal.present();
+  }
+
+  async presentSentimentModal() {
+    const modal = await this.modalController.create({
+      component: SentimentModalComponent,
       componentProps: {
         post: this.post
       },

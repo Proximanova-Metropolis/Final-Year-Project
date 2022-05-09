@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Information
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="p-4">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-textarea class="small" color="medium" readonly [value]="post.content"></ion-textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>
