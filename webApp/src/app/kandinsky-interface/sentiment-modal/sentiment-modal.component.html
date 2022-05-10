@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sentiment Analysis
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="p-4">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label position="stacked">Deselect all sentiment analysis packages to suppress this popup.</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Sentiwordnet sentiment:</ion-label>
+      <ion-input color="medium" readonly value="{{ analyticsSrv.ReturnedData.sentiwordnet1 }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">SenticNet sentiment:</ion-label>
+      <ion-input color="medium" readonly value="{{ analyticsSrv.ReturnedData.senticnet1 }}"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">VADER sentiment:</ion-label>
+      <ion-input color="medium" readonly value="{{ analyticsSrv.ReturnedData.vader1 }}"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
