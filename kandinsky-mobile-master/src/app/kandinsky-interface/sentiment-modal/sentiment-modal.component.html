@@ -13,8 +13,22 @@
 <ion-content class="p-4">
   <ion-list lines="none">
     <ion-item>
-      <ion-label position="stacked">Title</ion-label>
-      <ion-textarea class="small" color="medium" readonly [value]="post.content"></ion-textarea>
+      <ion-label position="stacked">Select up to 2 sentiment analysis packages to run.</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox color="primary"></ion-checkbox>
+      <ion-label>Sentiwordnet</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox color="primary"></ion-checkbox>
+      <ion-label>SenticNet</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox color="primary"></ion-checkbox>
+      <ion-label>VADER</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
+<ion-button expand="block" (click)="dismiss()">
+  OK
+</ion-button>
