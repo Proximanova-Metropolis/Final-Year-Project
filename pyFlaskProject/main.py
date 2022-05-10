@@ -11,8 +11,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-
-
 @app.route('/sentiment', methods=['GET'])
 @cross_origin()
 def home_page():
@@ -20,10 +18,7 @@ def home_page():
     json_dump = json.dumps(data_set)
     return json_dump
 
-
-
-
-@app.route('/analysysold', methods=['POST'])
+@app.route('/analysisold', methods=['POST'])
 @cross_origin()
 def home_page2():
     request_data = request.get_json()
@@ -39,7 +34,7 @@ def home_page2():
     json_dump = json.dumps(data_set)
     return json_dump
 
-@app.route('/analysys', methods=['POST'])
+@app.route('/analysis', methods=['POST'])
 @cross_origin()
 def home_page3():
     request_data = request.get_json()
@@ -55,9 +50,9 @@ def home_page3():
         retval2 = ''
         retval3 = ''
     elif len(txt1) > 0:
-        if sn >0 : retval1 = senticnet.sentiment_analyzer_scores(txt1)
-        if swn >0 : retval2 = sentiwordnet.sentiment_analyzer_scores(txt1)
-        if vd >0 : retval3 = vader.sentiment_analyzer_scores(txt1)
+        if sn > 0: retval1 = senticnet.sentiment_analyzer_scores(txt1)
+        if swn > 0: retval2 = sentiwordnet.sentiment_analyzer_scores(txt1)
+        if vd >0: retval3 = vader.sentiment_analyzer_scores(txt1)
     else:
         retval1 = ''
         retval2 = ''

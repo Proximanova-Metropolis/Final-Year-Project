@@ -12,11 +12,8 @@ import { AnalyzedResult } from '../models/models';
   providedIn: 'root'
 })
 export class AnalyticsService {
- public CheckedStatus={ sn:true, swn:true,vd:true  }
-
+ public CheckedStatus = { sn:true, swn:true, vd:true }
  public ReturnedData:AnalyzedResult;
-
- 
 
   constructor(public httpClient: HttpClient) {
   }
@@ -48,16 +45,12 @@ export class AnalyticsService {
     return similarity(aVector, bVector);
   }
 
-
   public AnalyzeComment(ana_text:string ){
-   let pr_sn= this.CheckedStatus.sn?1:0;
-   let pr_swn= this.CheckedStatus.swn?1:0;
-  let  pr_vd= this.CheckedStatus.vd?1:0;
-   return this.httpClient.post('http://127.0.0.1:7775/analysys',{ text:ana_text,sn:pr_sn,swn:pr_swn,vd:pr_vd})
-
+    let pr_sn= this.CheckedStatus.sn?1:0;
+    let pr_swn= this.CheckedStatus.swn?1:0;
+    let pr_vd= this.CheckedStatus.vd?1:0;
+    return this.httpClient.post('http://127.0.0.1:7775/analysis', { text:ana_text, sn:pr_sn, swn:pr_swn, vd:pr_vd })
   }
-
-
 }
 
 export type Topic = {
